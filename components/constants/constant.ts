@@ -388,7 +388,7 @@ export const experiences: Array<Experience> = [
   },
   {
     level: 1,
-    company: "University",
+    company: "Orissa University of Agriculture and Technology",
     role: "Master of Computer Application",
     duration: "2020 - 2022",
     location: "Bhubaneswar, Odisha",

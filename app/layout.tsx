@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Asutosh Acharya - Software Engineer",
   description:
     "Personal portfolio with a Valorant-inspired UI featuring my projects, skills, and love for tech and gaming.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
