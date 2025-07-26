@@ -338,7 +338,7 @@ export const projects: Array<Project> = [
     challenges: [],
     learnings: [],
     githubUrl: "https://github.com/AsutoshAcharya/agent-portfolio",
-    // liveUrl: "https://asutoshacharya.github.io/SmartResume-frontend/auth",
+    liveUrl: "https://agent-asutosh.vercel.app/",
   },
 ];
 type Experience = {
@@ -364,7 +364,7 @@ export const experiences: Array<Experience> = [
       "Built scalable and reusable UI components using React, reducing future dev time by 30%",
       "Implemented advanced drag-and-drop scheduling for shift management (daily, weekly, biweekly)",
       "Developed in-app chat system with group messaging, mentions, file uploads, and replies",
-      "Created LLM-powered resume parsing with real-time display and integrated chatbot",
+      "Created LLM-powered resume parsing frontend with real-time display and integrated chatbot",
       "Developed and integrated REST APIs, contributing to ~20% of backend development",
       "Led code reviews and mentored junior devs to promote clean, type-safe architecture",
       "Improved frontend-backend integration and minimized data latency for smooth UX",

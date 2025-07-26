@@ -2,20 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import {
-  Github,
-  ExternalLink,
-  Keyboard,
-  Info,
-  Linkedin,
-  Youtube,
-} from "lucide-react";
+import { ExternalLink, Keyboard, Info } from "lucide-react";
 import { socialLinks } from "./constants/constant";
 
 const buildInfo = {
   version: "v2.4.1",
-  lastDeploy: "2024-01-15",
-  commit: "a7b3c9d",
+  lastDeploy: "26-07-2025",
+  commit: "5ef389a",
   uptime: "99.9%",
 };
 
@@ -123,7 +116,7 @@ export default function Footer() {
           className="mt-8 pt-8 border-t border-white/8 text-center"
         >
           <p className="text-xs text-valorant-text/40 font-mono">
-            © 2025 ASUTOSH ACHARYA // SOFTWARE DEVELOPER // ALL RIGHTS RESERVED
+            © 2025 ASUTOSH ACHARYA // SOFTWARE ENGINEER // ALL RIGHTS RESERVED
           </p>
         </motion.div>
       </div>
