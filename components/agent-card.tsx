@@ -11,10 +11,20 @@ import NodeJsIcon from "@/lib/assets/NodeJsIcon";
 import MongoIcon from "@/lib/assets/MongoIcon";
 
 const stats = [
-  { label: "YEARS EXP", value: 2.8, suffix: "+" },
-  { label: "PROJECTS", value: 8, suffix: "" },
-  { label: "COMMITS", value: 2500, suffix: "+" },
-  { label: "TECH STACK", value: 15, suffix: "+" },
+  {
+    label: "FIELD TIME",
+    value: 2.8,
+    suffix: "+",
+    subtext: "Years of Experience",
+  },
+  { label: "MISSIONS", value: 8, suffix: "", subtext: "Completed Projects" },
+  { label: "OPS LOGGED", value: 2500, suffix: "+", subtext: "Git Commits" },
+  {
+    label: "LOADOUTS",
+    value: 15,
+    suffix: "+",
+    subtext: "Technologies & Tools Used",
+  },
 ];
 type Ability = {
   name: string;
@@ -269,6 +279,9 @@ export default function AgentCard() {
                       </motion.div>
                       <div className="text-xs text-valorant-text/60 uppercase tracking-wider">
                         {stat.label}
+                        <span className="block text-[10px] text-valorant-text/40 normal-case tracking-normal mt-1">
+                          {stat.subtext}
+                        </span>
                       </div>
                     </div>
                   </motion.div>
