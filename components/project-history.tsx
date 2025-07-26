@@ -12,7 +12,6 @@ export default function ProjectHistory() {
     (typeof projects)[0] | null
   >(null);
 
-  // Variants for project list items
   const listItemVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
@@ -23,7 +22,6 @@ export default function ProjectHistory() {
     hover: { x: 6 },
   };
 
-  // Variants for modal background and content
   const backdropVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.3 } },
@@ -58,7 +56,7 @@ export default function ProjectHistory() {
               whileInView="visible"
               viewport={{ once: true }}
               whileHover="hover"
-              onClick={() => setSelectedProject(project)}
+              // onClick={() => setSelectedProject(project)}
               className="bg-valorant-surface border border-white/8 p-6 clip-corner cursor-pointer hover:border-valorant-teal/50 transition-all duration-300 group"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
