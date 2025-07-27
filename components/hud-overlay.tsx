@@ -17,7 +17,7 @@ export default function HUDOverlay({ currentSection }: HUDOverlayProps) {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-40">
-      <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
+      <div className="absolute top-4 left-4 right-4 flex justify-end items-start">
         <motion.div
           className="bg-valorant-surface/80 border border-white/20 px-4 py-2 clip-corner backdrop-blur-sm"
           initial={{ opacity: 0, x: -20 }}
@@ -31,16 +31,15 @@ export default function HUDOverlay({ currentSection }: HUDOverlayProps) {
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="bg-valorant-surface/80 border border-white/20 px-4 py-2 clip-corner backdrop-blur-sm"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
         >
           <div className="text-xs font-mono text-valorant-text/80 text-right">
             <div>{time.toLocaleTimeString()}</div>
-            {/* <div className="text-valorant-teal">ONLINE</div> */}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-valorant-teal/30"></div>
