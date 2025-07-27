@@ -211,7 +211,7 @@ export const techStack: Record<string, Array<AbilityInfo>> = {
       name: "Postman",
       rank: "PLATINUM",
       description: "API testing tool",
-      usage: "API development and testing",
+      usage: "Design, test, automate, and document APIs efficiently",
     },
   ],
   gamedev: [
