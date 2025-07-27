@@ -8,12 +8,12 @@ interface HUDOverlayProps {
 }
 
 export default function HUDOverlay({ currentSection }: HUDOverlayProps) {
-  const [time, setTime] = useState(new Date());
+  // const [time, setTime] = useState(new Date());
 
-  useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(() => setTime(new Date()), 1000);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-40">
