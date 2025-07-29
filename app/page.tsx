@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useState, useEffect } from "react";
 import AgentCard from "@/components/agent-card";
 import TechStack from "@/components/tech-stack";
@@ -10,9 +10,7 @@ import Achievements from "@/components/achievements";
 import ContactModal from "@/components/contact-modal";
 import Footer from "@/components/footer";
 import HUDOverlay from "@/components/hud-overlay";
-import { Button } from "@/components/ui/button";
 import NavigationHeader from "@/components/navigation-header";
-import LoadingScreen from "@/components/loading-screen";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -96,8 +94,8 @@ export default function Portfolio() {
         ></motion.div>
 
         <motion.div
-          className="absolute top-[10%] left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-valorant-teal to-transparent" // Thicker line
-          animate={{ x: ["-100%", "100%"], opacity: [0, 0.3, 0, 0.15, 0] }} // Increased opacity
+          className="absolute top-[10%] left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-valorant-teal to-transparent"
+          animate={{ x: ["-100%", "100%"], opacity: [0, 0.3, 0, 0.15, 0] }}
           transition={{
             duration: 10,
             repeat: Number.POSITIVE_INFINITY,
@@ -117,8 +115,8 @@ export default function Portfolio() {
         />
 
         <motion.div
-          className="absolute bottom-[20%] right-0 w-full h-1.5 bg-gradient-to-l from-transparent via-valorant-red to-transparent" // Thicker line
-          animate={{ x: ["100%", "-100%"], opacity: [0, 0.3, 0, 0.15, 0] }} // Increased opacity
+          className="absolute bottom-[20%] right-0 w-full h-1.5 bg-gradient-to-l from-transparent via-valorant-red to-transparent"
+          animate={{ x: ["100%", "-100%"], opacity: [0, 0.3, 0, 0.15, 0] }}
           transition={{
             duration: 12,
             repeat: Number.POSITIVE_INFINITY,
@@ -159,11 +157,11 @@ export default function Portfolio() {
         />
 
         <motion.div
-          className="absolute top-1/2 left-1/4 w-48 h-48 bg-valorant-teal/20" // Larger, higher opacity
+          className="absolute top-1/2 left-1/4 w-48 h-48 bg-valorant-teal/20"
           style={{
             transform: "translate(-50%, -50%)",
             clipPath:
-              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)", // Hexagon
+              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
           }}
           animate={{
             scale: [0.8, 1.4, 0.8],
@@ -180,11 +178,11 @@ export default function Portfolio() {
         />
 
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-valorant-red/20" // Larger, higher opacity
+          className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-valorant-red/20"
           style={{
             transform: "translate(50%, 50%)",
             clipPath:
-              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)", // Hexagon
+              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
           }}
           animate={{
             scale: [0.7, 1.3, 0.7],
@@ -201,7 +199,7 @@ export default function Portfolio() {
         />
 
         <motion.div
-          className="absolute top-[20%] right-[10%] w-32 h-32 bg-valorant-teal/15" // Larger, higher opacity
+          className="absolute top-[20%] right-[10%] w-32 h-32 bg-valorant-teal/15"
           style={{
             transform: "translate(50%, -50%)",
             clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
@@ -220,7 +218,7 @@ export default function Portfolio() {
         />
 
         <motion.div
-          className="absolute bottom-[10%] left-[15%] w-28 h-28 bg-valorant-red/15" // Larger, higher opacity
+          className="absolute bottom-[10%] left-[15%] w-28 h-28 bg-valorant-red/15"
           style={{
             transform: "translate(-50%, 50%)",
           }}
@@ -245,7 +243,7 @@ export default function Portfolio() {
         ></div>
 
         <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-white/15 to-transparent" // Increased opacity
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-white/15 to-transparent"
           animate={{
             backgroundPositionY: ["0%", "100%"],
           }}
@@ -302,33 +300,7 @@ export default function Portfolio() {
             }}
           />
         ))}
-        {[...Array(100)].map((_, i) => (
-          <motion.div
-            key={`red-particle-${i}`}
-            className="absolute w-0.75 h-0.75 rounded-full bg-valorant-red/60" // Slightly larger, higher opacity
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              x: [0, (Math.random() - 0.5) * 70],
-              y: [0, (Math.random() - 0.5) * 70],
-              opacity: [0, 0.15, 0],
-              scale: [0.7, 1.8, 0.7],
-            }}
-            transition={{
-              duration: 15 + Math.random() * 10,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-              delay: Math.random() * 15,
-            }}
-          />
-        ))}
       </motion.div>
-      {/* 
-      <AnimatePresence>
-        {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
-      </AnimatePresence> */}
 
       <motion.div
         initial={{ opacity: 0 }}
