@@ -9,6 +9,7 @@ import ReactIcon from "@/lib/assets/ReactIcon";
 import TsIcon from "@/lib/assets/TsIcon";
 import NodeJsIcon from "@/lib/assets/NodeJsIcon";
 import MongoIcon from "@/lib/assets/MongoIcon";
+import { differenceInMonths } from "date-fns";
 
 const stats = [
   {
@@ -249,43 +250,51 @@ export default function AgentCard() {
                 transition={{ delay: 0.5 }}
                 className="grid grid-cols-2 md:grid-cols-4 gap-4"
               >
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    className="bg-valorant-bg/50 border border-white/8 p-4 clip-corner relative overflow-hidden group"
-                    whileHover={{
-                      scale: 1.05,
-                      borderColor: "rgba(255, 70, 85, 0.5)",
-                    }}
-                    transition={{ duration: 0.2 }}
-                  >
+                {stats.map((stat, index) => {
+                  const monthsDiff = differenceInMonths(
+                    new Date(),
+                    new Date(2022, 12, 15)
+                  );
+                  const yearsDecimal = monthsDiff / 12;
+                  const fieldTime = (yearsDecimal + 0.2).toFixed(1);
+                  return (
                     <motion.div
-                      className="absolute inset-0 bg-valorant-red/10"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
+                      key={stat.label}
+                      className="bg-valorant-bg/50 border border-white/8 p-4 clip-corner relative overflow-hidden group"
+                      whileHover={{
+                        scale: 1.05,
+                        borderColor: "rgba(255, 70, 85, 0.5)",
+                      }}
                       transition={{ duration: 0.2 }}
-                    />
-                    <div className="relative z-10">
+                    >
                       <motion.div
-                        className="text-2xl font-bold text-valorant-red font-mono"
-                        animate={{
-                          textShadow: isHovered
-                            ? "0 0 10px rgba(255, 70, 85, 0.5)"
-                            : "none",
-                        }}
-                      >
-                        {stat.value}
-                        {stat.suffix}
-                      </motion.div>
-                      <div className="text-xs text-valorant-text/60 uppercase tracking-wider">
-                        {stat.label}
-                        <span className="block text-[10px] text-valorant-text/40 normal-case tracking-normal mt-1">
-                          {stat.subtext}
-                        </span>
+                        className="absolute inset-0 bg-valorant-red/10"
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.2 }}
+                      />
+                      <div className="relative z-10">
+                        <motion.div
+                          className="text-2xl font-bold text-valorant-red font-mono"
+                          animate={{
+                            textShadow: isHovered
+                              ? "0 0 10px rgba(255, 70, 85, 0.5)"
+                              : "none",
+                          }}
+                        >
+                          {stat.label === "FIELD TIME" ? fieldTime : stat.value}
+                          {stat.suffix}
+                        </motion.div>
+                        <div className="text-xs text-valorant-text/60 uppercase tracking-wider">
+                          {stat.label}
+                          <span className="block text-[10px] text-valorant-text/40 normal-case tracking-normal mt-1">
+                            {stat.subtext}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  );
+                })}
               </motion.div>
 
               <motion.div
