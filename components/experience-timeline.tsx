@@ -109,7 +109,7 @@ export default function ExperienceTimeline() {
                         {exp.highlights.map((highlight, idx) => (
                           <li
                             key={idx}
-                            className="text-sm text-valorant-text/80 flex gap-2 flex-row items-center"
+                            className="text-sm text-valorant-text/80 flex gap-2 flex-row"
                           >
                             <span className="text-valorant-teal flex-shrink-0">
                               ▶

@@ -361,13 +361,15 @@ export const experiences: Array<Experience> = [
     duration: "2022 Dec - Present",
     location: "Jaipur, Rajasthan",
     highlights: [
-      "Built scalable and reusable UI components using React, reducing future dev time by 30%",
-      "Implemented advanced drag-and-drop scheduling for shift management (daily, weekly, biweekly)",
-      "Developed in-app chat system with group messaging, mentions, file uploads, and replies",
-      "Created LLM-powered resume parsing frontend with real-time display and integrated chatbot",
-      "Developed and integrated REST APIs, contributing to ~20% of backend development",
-      "Led code reviews and mentored junior devs to promote clean, type-safe architecture",
-      "Improved frontend-backend integration and minimized data latency for smooth UX",
+      "Developed and integrated REST APIs across application modules to streamline data handling and support seamless feature integration.",
+      "Built scalable, reusable UI components and optimized page load performance using React performance techniques.",
+      "Restructured nested components, reducing future development time by 30%.",
+      "Implemented a comprehensive schedule creation feature, including a driver-specific shift scheduling interface with daily, weekly, and biweekly views.",
+      "Enhanced user experience by integrating intuitive drag-and-drop functionality for seamless shift creation.",
+      "Contributed to an in-app chat system with one-on-one and group messaging, implementing features like group creation, mentions, message replies/forwarding, file uploads, and file preview support.",
+      "Resolved 50+ customer-reported bugs and managed 20+ new feature implementation requests, ensuring smooth functionality and on-time delivery.",
+      "Used SonarQube to identify and fix critical issues and blockers, reducing code vulnerabilities by 25% and maintaining a clean codebase.",
+      "Led code reviews and mentored junior developers, promoting type safety, clean architecture, and coding standards.",
     ],
     tools: [
       "React",
@@ -383,7 +385,8 @@ export const experiences: Array<Experience> = [
       "HTML",
       "CSS",
     ],
-    impact: "Optimized UI and built REST APIs for smooth backend integration.",
+    impact:
+      "Optimized UI and engineered REST APIs for smooth backend integration.",
     unlocked: true,
   },
   {
