@@ -90,23 +90,6 @@ export default function Footer() {
               })}
             </div>
           </div>
-
-          {/* <div className="bg-valorant-bg/30 border border-white/8 p-6 clip-corner">
-            <h3 className="text-sm font-mono text-valorant-text/60 uppercase tracking-wider mb-4 flex items-center gap-2">
-              <Keyboard className="w-4 h-4 text-valorant-teal" />
-              SHORTCUTS
-            </h3>
-            <div className="space-y-2">
-              {shortcuts.map((shortcut) => (
-                <div key={shortcut.key} className="flex items-center justify-between">
-                  <Badge variant="outline" className="text-xs font-mono border-white/20 text-valorant-text/60">
-                    {shortcut.key}
-                  </Badge>
-                  <span className="text-xs text-valorant-text/40">{shortcut.action}</span>
-                </div>
-              ))}
-            </div>
-          </div> */}
         </motion.div>
 
         <motion.div
