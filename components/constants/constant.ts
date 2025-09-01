@@ -370,6 +370,7 @@ export const experiences: Array<Experience> = [
       "Resolved 50+ customer-reported bugs and managed 20+ new feature implementation requests, ensuring smooth functionality and on-time delivery.",
       "Used SonarQube to identify and fix critical issues and blockers, reducing code vulnerabilities by 25% and maintaining a clean codebase.",
       "Led code reviews and mentored junior developers, promoting type safety, clean architecture, and coding standards.",
+      "Implemented unit and integration tests using Mocha & Chai, increasing test coverage to 85% and reducing production bugs.",
     ],
     tools: [
       "React",
