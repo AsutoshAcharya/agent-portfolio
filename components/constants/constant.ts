@@ -375,6 +375,8 @@ export const experiences: Array<Experience> = [
     tools: [
       "React",
       "TypeScript",
+      "Material UI",
+      "Tailwind CSS",
       "JavaScript",
       "REST API",
       "Node.js",
